@@ -6,8 +6,15 @@
 #include <iostream>
 #include <interaction_lib/InteractionLib.h>
 #include <interaction_lib/misc/InteractionLibPtr.h>
+
+TCPMode tcpMode = TCPMode::Server;
+
 int main()
 {
+	tcpSetup(tcpMode);
+	if (tcpMode == TCPMode::Server)
+		tcpListen();
+
     // create the interaction library
     IL::UniqueInteractionLibPtr intlib(IL::CreateInteractionLib(IL::FieldOfUse::Interactive));
     // assume single screen with size 2560x1440 and use full screen (not window local) coordinates
@@ -31,13 +38,9 @@ int main()
         memcpy_s(buffer, 4, &(evt.x), 4);
         memcpy_s(buffer+4, 4, &(evt.y), 4);*/
         std::string gazeMsg = evt.validity == IL::Validity::Valid ? std::to_string(evt.x) + " " + std::to_string(evt.y) : "";
-        tcpSendMsg(gazeMsg);
+        tcpSendMsg(tcpMode, gazeMsg);
     }, nullptr);
     std::cout << "Starting interaction library update loop.\n";
-
-
-    // zhenyi
-    tcpClientSetup();
 
     // setup and maintain device connection, wait for device data between events and 
     // update interaction library to trigger all callbacks, stop after 200 cycles
