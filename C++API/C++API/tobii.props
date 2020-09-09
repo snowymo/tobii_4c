@@ -5,15 +5,15 @@
   <PropertyGroup />
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\FRL\Documents\Zhenyi\tobii_interaction_lib_windows_x64_0.7.340_beta\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\snowy\OneDrive\Documents\Zhenyi\tobii_interaction_lib_windows_x64_0.7.340_beta\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies>interaction_lib.lib;tobii_stream_engine.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\FRL\Documents\Zhenyi\tobii_interaction_lib_windows_x64_0.7.340_beta\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\snowy\OneDrive\Documents\Zhenyi\tobii_interaction_lib_windows_x64_0.7.340_beta\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>XCOPY "C:\Users\FRL\Documents\Zhenyi\tobii_interaction_lib_windows_x64_0.7.340_beta\bin\x64\interaction_lib.dll" "$(TargetDir)" /Y
-XCOPY "C:\Users\FRL\Documents\Zhenyi\tobii_interaction_lib_windows_x64_0.7.340_beta\bin\x64\tobii_stream_engine.dll" "$(TargetDir)" /Y</Command>
+      <Command>XCOPY "C:\Users\snowy\OneDrive\Documents\Zhenyi\tobii_interaction_lib_windows_x64_0.7.340_beta\bin\x64\interaction_lib.dll" "$(TargetDir)" /Y
+XCOPY "C:\Users\snowy\OneDrive\Documents\Zhenyi\tobii_interaction_lib_windows_x64_0.7.340_beta\bin\x64\tobii_stream_engine.dll" "$(TargetDir)" /Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup />

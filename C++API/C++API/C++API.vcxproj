@@ -23,7 +23,7 @@
     <ProjectGuid>{6ED588DA-4ED8-4434-99DC-DB22ADD29BD1}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>CAPI</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <ProjectName>FocusExample</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
